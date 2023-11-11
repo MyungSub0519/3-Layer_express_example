@@ -1,4 +1,4 @@
-# INTERN-MYOUNGSEOP-EXPRESS
+# MVC+3-tier Express
 
 ## Start
 
