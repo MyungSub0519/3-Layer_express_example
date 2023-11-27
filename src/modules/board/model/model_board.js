@@ -141,10 +141,9 @@ class BoardModel {
   }
 
   async selectBoardViewer(params) {
-    const result = await BoardViewLog.find({ boardCode: params.boardCode })
-    if (isEmpty(result)) return null
-    const DTO = new ModelViewBoardDTO(result)
-    return DTO
+    const result = await BoardViewLog.find({ boardCode: params.boardCode, userIp: params.ip })
+    if (isEmpty(result)) return false
+    else return true
   }
 
   async addViewBoard(params) {
@@ -160,10 +159,9 @@ class BoardModel {
   }
 
   async selectBoardRecommender(params) {
-    const result = await BoardRecommendLog.find({ boardCode: params.boardCode })
-    if (isEmpty(result)) return null
-    const DTO = new ModelRecommendBoardDTO(result)
-    return DTO
+    const result = await BoardRecommendLog.find({ boardCode: params.boardCode, userIp: params.ip })
+    if (isEmpty(result)) return false
+    else return true
   }
 
   async addRecommendBoard(params) {
