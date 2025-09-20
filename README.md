@@ -1,4 +1,4 @@
-# MVC+3-tier Express
+# 3-tier Express
 
 ## Start
 
